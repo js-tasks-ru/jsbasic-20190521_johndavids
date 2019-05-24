@@ -1,0 +1,32 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Pow request</title>
+</head>
+
+<body>
+    <script>
+
+        // Получаем данные от пользователя
+        var x = prompt('Введите первое число:');
+        var n = prompt('Введите второе число:');
+
+        // Приводим строки к числам
+        x = 1 * x;
+        n = 1 * n;
+
+        function pow (x, n) {
+            if(n != 1){
+                return x * pow(x, n-1);
+            }else{
+                return x;
+            }
+        }
+
+        alert(pow(x, n));
+
+    </script>
+
+</body>
+
+</html>
