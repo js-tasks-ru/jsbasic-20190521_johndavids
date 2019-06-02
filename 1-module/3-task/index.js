@@ -5,32 +5,27 @@
  * @param   {string} str -  входные данные
  * @returns {{min:number, max:number}}  объект
  */
+
 function getMinMax(str) {
 
-    let count = 0;
-    let resobj = {};
-    let num = str.split(' ');
+    let resArr = [];
+    let num = str.split(/[\s,]+/);
+    let result = [];
 
     for (let numb in num){
 
         if (!isNaN(parseFloat(num[numb]))){
 
-            resobj[count] = parseFloat(num[numb]);
-
-            count++;
+            //resobj[count] = parseFloat(num[numb]);
+            resArr.push(parseFloat(num[numb]));
 
         }
 
     }
 
-    let arr = Object.values(resobj);
-
-    let result = [];
-
-    result['min'] = Math.min.apply( null, arr );
-    result['max'] = Math.max.apply( null, arr );
+    result['min'] = Math.min.apply( null, resArr );
+    result['max'] = Math.max.apply( null, resArr );
 
     return result;
 
 }
-
