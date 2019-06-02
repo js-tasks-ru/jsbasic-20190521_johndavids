@@ -37,5 +37,3 @@ function getMinMax(str) {
 
 }
 
-console.log(getMinMax(inputData));
-
