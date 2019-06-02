@@ -7,5 +7,30 @@
  */
 function getMinMax(str) {
 
+    let count = 0;
+    let resobj = {};
+    let num = str.split(' ');
+
+    for (let numb in num){
+
+        if (!isNaN(parseFloat(num[numb]))){
+
+            resobj[count] = parseFloat(num[numb]);
+
+            count++;
+
+        }
+
+    }
+
+    let arr = Object.values(resobj);
+
+    let result = [];
+
+    result['min'] = Math.min.apply( null, arr );
+    result['max'] = Math.max.apply( null, arr );
+
+    return result;
+
 }
 
