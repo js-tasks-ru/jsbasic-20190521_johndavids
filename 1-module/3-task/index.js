@@ -10,7 +10,7 @@ function getMinMax(str) {
 
     let resArr = [];
     let num = str.split(/[\s,]+/);
-    let result = [];
+    let result = {};
 
     for (let numb in num){
 
