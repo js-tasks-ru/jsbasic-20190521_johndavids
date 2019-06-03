@@ -2,6 +2,8 @@
 // Generated on Sun Nov 26 2017 12:48:45 GMT+0000 (GMT)
 const { TRAVIS } = process.env;
 
+console.log(process.env);
+
 module.exports = function(config) {
   config.set({
     
