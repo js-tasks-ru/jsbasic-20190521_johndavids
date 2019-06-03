@@ -8,10 +8,13 @@ function clone (obj) {
 
     let clons = {};
 
+    for (const key in obj) {
 
-    for (let key in obj) {
-        clons[key] = obj[key];
+        if(typeof obj[key] === "object" && obj[key] !== null){
+            clons[key] = clone(obj[key]);
+        }else{
+            clons[key] = obj[key];
+        }
     }
-    return obj;
-
+    return clons;
 }
