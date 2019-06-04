@@ -12,6 +12,4 @@ function isEmpty (obj) {
 
     return (count === 0) ?  true : false;
 
-    
-
 }
