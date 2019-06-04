@@ -17,5 +17,6 @@ function clone (obj) {
         }
     }
     return clons;
-    
+
+
 }
