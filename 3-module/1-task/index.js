@@ -6,7 +6,7 @@
  */
 
 function showSalary(data, age) {
-    let result;
+    let result = '';
     for(let i = 0; i < data.length; i++) {
         if(data[i].age <= age){
             result += `${data[i].name}, ${data[i].balance}\n`;
