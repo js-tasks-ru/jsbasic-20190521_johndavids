@@ -12,5 +12,5 @@ function showSalary(data, age) {
             result += `${data[i].name}, ${data[i].balance}\n`;
         }
     }
-    return result;
+    return result.substring(0, result.length - 1);
 }
