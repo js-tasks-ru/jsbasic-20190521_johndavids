@@ -5,21 +5,16 @@
  * @param {Element} table
  */
 function highlight(table) {
-	let tr = document.getElementsByTagName('tr');
-
+	let tr = table.getElementsByTagName('tr');
 	
 	for(let i = 1; i < tr.length; i++){
 
 		// Start - Проставит в "<tr>" класс male/female, в зависимости от содержимого ячекйки Gender
 
 		if(tr[i].children[2].textContent === 'm'){
-			
 			tr[i].classList.add("male");
-
 		}else if (tr[i].children[2].textContent === 'f'){
-
 			tr[i].classList.add("female");
-
 		}
 
 		// End - Проставит в "<tr>" класс male/female, в зависимости от содержимого ячекйки Gender
@@ -28,7 +23,6 @@ function highlight(table) {
 
 		if(tr[i].children[3].getAttribute("data-available") === "true"){
 			tr[i].classList.add("available");
-			//console.log(tr[i].children[3].getAttribute("data-available"));
 		}else if(tr[i].children[3].getAttribute("data-available") === "false"){
 			tr[i].classList.add("unavailable");
 		}else{
@@ -45,7 +39,6 @@ function highlight(table) {
 
 		// End - Установит inline-стиль style="text-decoration: line-through", если значение ячейки Age меньше 18
 
-
 	}
-
+return table;
 }
